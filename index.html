@@ -6,14 +6,66 @@
     <title>Malaria</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
-<body>
+<body ng-app="">
     <h1>Malaria</h1>
-    <p>What would you like to learn about Malaria?</p>
+    <p>Would you like to learn about Malaria from Chat-GPT?</p>
+    <input type="radio" ng-model="want" value="yes"><label>Yes</label>
+    <input type="radio" ng-model="want" value="no"><label>No</label>
+    <div ng-switch="want">
+        <div ng-switch-when="yes">
+            <P>Select a topic below: </P>
     <form>
-        <input type="radio"><label>About</label>
-        <input type="radio"><label>Symptoms</label>
-        <input type="radio"><label>Causes</label>
-        <input type="radio"><label>Vaccination</label>
+        <input type="radio" ng-model="learn" value="About"><label>About</label>
+        <input type="radio" ng-model="learn" value="Symptoms"><label>Symptoms</label>
+        <input type="radio" ng-model="learn" value="Causes"><label>Causes</label>
+        <input type="radio" ng-model="learn" value="Vaccines"><label>Vaccines</label>
     </form>
+    <div ng-switch="learn">
+        <div ng-switch-when="About">
+            <h2>About</h2>
+            <p>Malaria is a life-threatening infectious disease caused by the Plasmodium parasite, which is transmitted to humans through the bites of infected female Anopheles mosquitoes. This global health issue remains a significant concern, particularly in tropical and subtropical regions where the mosquitoes thrive. There are several species of Plasmodium that can infect humans, with Plasmodium falciparum being the most deadly. The symptoms of malaria include fever, chills, headache, and muscle aches, and if left untreated, it can lead to severe complications and death.</p>
+            <p>One of the major challenges in the fight against malaria is the development of drug-resistant strains of the parasite. Over the years, various antimalarial drugs have been used, but the parasite has developed resistance to many of them, making treatment more difficult. This ongoing evolution of drug resistance emphasizes the importance of continued research and the development of new and effective antimalarial medications.</p>
+            <p>Preventive measures play a crucial role in controlling the spread of malaria. Insecticide-treated bed nets, indoor residual spraying, and antimalarial medications for high-risk populations are essential components of malaria prevention programs. Efforts to control the mosquito population and improve sanitation in affected areas also contribute to malaria prevention. Additionally, ongoing research is focused on the development of a malaria vaccine, which could provide a significant breakthrough in reducing the burden of this disease.</p>
+            <p>Malaria disproportionately affects vulnerable populations, including young children and pregnant women. In endemic regions, the disease can have a significant impact on economic development, as it reduces workforce productivity and places a strain on healthcare systems. Global initiatives, such as the Roll Back Malaria partnership and the World Health Organization's Global Malaria Program, are working towards reducing the prevalence of malaria and improving access to effective prevention and treatment strategies.</p>
+            <p>While progress has been made in recent years, malaria remains a formidable global health challenge that requires sustained efforts in research, prevention, and treatment. International collaboration, funding, and a multi-faceted approach are essential to ultimately eradicate this devastating disease and improve the health and well-being of populations at risk.</p>
+        </div>
+        <div ng-switch-when="Symptoms">
+            <h2>Symptoms</h2>
+            <ul style="list-style: disc;">
+                <li>Fever: Fever is one of the hallmark symptoms of malaria. It typically occurs in cycles, with the person experiencing chills and a high fever followed by a period of sweating.</li>
+                <li>Chills: Malaria often causes sudden and severe coldness, leading to shaking and shivering.</li>
+                <li>Headache: Headaches are a common symptom of malaria and can range from mild to severe.</li>
+                <li>Muscle and Joint Pain: Malaria infection can cause muscle aches and joint pain, often described as a general feeling of discomfort.</li>
+                <li>Fatigue: Persistent and overwhelming fatigue is another common symptom of malaria. It can contribute to a general sense of weakness.</li>
+                <li>Nausea and Vomiting: Malaria may cause nausea and vomiting, which can contribute to dehydration in severe cases.</li>
+                <li>Sweating: Profuse sweating is a characteristic symptom that often follows the fever in the malaria cycle.</li>
+                <li>Anemia: Malaria can lead to a decrease in red blood cells, resulting in anemia. Symptoms of anemia include weakness, paleness, and shortness of breath.</li>
+                <li>Abdominal Pain: Some individuals with malaria may experience abdominal pain or discomfort.</li>
+                <li>Cough: In cases of severe malaria, respiratory symptoms such as a cough may occur.</li>
+            </ul>
+            <p atyle="color:grey;"><i><span style="color: red;">*</span>It's important to note that the symptoms of malaria can be similar to those of other illnesses, and diagnosis should be confirmed through laboratory testing. If someone is in an area where malaria is prevalent and experiences symptoms, it is crucial to seek medical attention promptly for accurate diagnosis and appropriate treatment.</i></p>
+        </div>
+        <div ng-switch-when="Causes">
+            <h2>Causes</h2>
+            <p>Malaria is caused by the Plasmodium parasites, which are transmitted to humans through the bites of infected female Anopheles mosquitoes. There are several species of Plasmodium that can infect humans, with Plasmodium falciparum, Plasmodium vivax, Plasmodium ovale, Plasmodium malariae, and Plasmodium knowlesi being the most common. Here is a breakdown of the causes of malaria:</p>
+            <ol>
+                <li>Parasite Transmission: Malaria is primarily caused by the transmission of Plasmodium parasites from infected humans to uninfected individuals through the bites of infected female Anopheles mosquitoes. When an infected mosquito bites a person, it injects the parasites into the bloodstream.</li>
+                <li>Plasmodium Life Cycle: The life cycle of the Plasmodium parasite involves two hosts—humans and mosquitoes. The sexual phase of the parasite's life cycle occurs in the mosquito, while the asexual phase occurs in humans. When an infected mosquito bites a person, it injects sporozoites into the bloodstream. These sporozoites travel to the liver, where they mature and reproduce, leading to the release of merozoites.</li>
+                <li>Bloodstream Infection: The released merozoites infect red blood cells, leading to the symptoms of malaria. In the case of Plasmodium vivax and Plasmodium ovale, some parasites can also form dormant liver-stage forms called hypnozoites, leading to relapses of the disease months or even years later.</li>
+                <li>Mosquito Vectors: Anopheles mosquitoes act as vectors for the Plasmodium parasites, facilitating their transmission between humans. The mosquitoes become infected when they bite an infected person and ingest the gametocytes (sexual forms of the parasite) during a blood meal.</li>
+                <li>Geographic Factors: Malaria is more prevalent in tropical and subtropical regions where the Anopheles mosquitoes thrive. Factors such as temperature, humidity, and the presence of suitable mosquito breeding sites contribute to the geographic distribution of malaria.</li>
+                <li>Human Movement: Human migration and movement play a role in the spread of malaria. People infected with the Plasmodium parasite can carry the disease from on</li>
+            </ol>
+            <p style="color: gray;"><i>Understanding the causes of malaria is crucial for implementing effective prevention and control measures. Strategies such as the use of bed nets, insecticides, antimalarial drugs, and community-based interventions are employed to reduce the transmission of the disease and its impact on global public health.</i></p>
+        </div>
+        <div ng-switch-when="Vaccines">
+            <h2>Vaccination</h2>
+            <p><i>"As of my last knowledge update in January 2022, there is no widely available, highly effective malaria vaccine for routine use. However, ongoing research and clinical trials have made progress in the development of malaria vaccines, and some promising candidates have been identified. One of the most advanced malaria vaccine candidates is known as RTS,S/AS01, which is developed by GlaxoSmithKline in partnership with the PATH Malaria Vaccine Initiative.
+                RTS,S/AS01 has undergone extensive clinical testing in malaria-endemic regions, and it has been shown to provide partial protection against malaria in young children. It targets the Plasmodium falciparum parasite, which is responsible for the majority of malaria cases and deaths.
+                It's important to note that the efficacy of the RTS,S/AS01 vaccine is not complete, and protection diminishes over time. Nevertheless, even partial protection can have a significant impact on reducing the burden of malaria, particularly in high-risk populations such as young children."</i><br> - Chat-GPT</p>
+        </div>
+    </div>
+        </div>
+    </div>
 </body>
 </html>
